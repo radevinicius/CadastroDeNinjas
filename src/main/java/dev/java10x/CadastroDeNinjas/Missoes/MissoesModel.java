@@ -13,6 +13,6 @@ public class MissoesModel {
     private Long id;
     private String nome;
     private String dificuldade;
-    @OneToMany
+    @OneToMany(mappedBy = "missoes")
     private List<NinjaModel> ninjas;
 }
