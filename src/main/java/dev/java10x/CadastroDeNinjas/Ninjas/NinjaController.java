@@ -9,7 +9,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/ninjas")
 public class NinjaController {
-    public NinjaService ninjaService;
+    public final NinjaService ninjaService;
 
     public NinjaController(NinjaService ninjaService) {
         this.ninjaService = ninjaService;
