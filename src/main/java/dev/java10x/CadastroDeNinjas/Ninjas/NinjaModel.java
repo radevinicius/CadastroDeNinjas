@@ -17,7 +17,13 @@ import java.util.Collection;
 @ToString(exclude = "missoes")
 public class NinjaModel {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "produto_seq")
+    @SequenceGenerator(
+            name = "produto_seq",
+            sequenceName = "produto_sequence",
+            allocationSize = 1
+    )
+
     @Column(name="id")
     private Long id;
     @Column(name = "nome")
